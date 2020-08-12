@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Game - Server 1</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+<body>
+    <ul class="menu">
+        <li class="list-item">Hi: Admin</li>
+        <li class="list-item active"><a href="index.html">City</a></li>
+        <li class="list-item"><a href="outCity.html">Out</a></li>
+        <li class="list-item"><a href="javascript:;">Tiền: <strong>999Bilion</strong></a></li>
+        <li class="list-item"><a href="javascript:;">Lúa: <strong>999Bilion</strong></a></li>
+        <li class="list-item"><a href="javascript:;">Gỗ: <strong>999Bilion</strong></a></li>
+        <li class="list-item"><a href="javascript:;">Than đá: <strong>999Bilion</strong></a></li>
+        <li class="list-item"><a href="javascript:;">Sắt: <strong>999Bilion</strong></a></li>
+        <li class="list-item"><a href="javascript:;">Vàng: <strong>999Bilion</strong></a></li>
+        <li class="list-item"><a href="javascript:;">Uran: <strong>999Bilion</strong></a></li>
+        
+    </ul>
+
+    <section class="main">
+        <!-- Farm -->
+        <!--<div class="mc-farm">
+            <div class="farmMac bg-warning">
+                <div class="farm-brand">
+                    <h1 class="ttFarm">Vàng</h1>
+                    <div class="total">
+                        <p>Thu nhập: <span id="vlFarm">20.000</span> vàng</p>
+                        <p>Thời gian: <span id="tFarm">100</span>/phút</p>
+                    </div>
+                    <div class="qlty"></div>
+                </div>
+                
+            </div>
+            <div class="farmMac bg-success">
+                <div class="farm-brand">
+                    <h1 class="ttFarm">Dầu</h1>
+                    <div class="total">
+                        <p>Thu nhập: <span id="vlFarm">20.000</span> vàng</p>
+                        <p>Thời gian: <span id="tFarm">100</span>/phút</p>
+                    </div>
+                    <div class="qlty"></div>
+                </div>
+            </div>
+        </div>-->
+        <!-- ./Farm -->
+        <!-- City -->
+        <div class="city">
+            <div class="info">
+                <div class="name">
+                    <p>City 
+                        <span id="nCity">Z</span>
+                        <sup id="lCity">1</sup></p>
+                </div>
+            </div>
+            <div class="wall">
+                <div class="detail">
+                    <div class="lane"></div>
+                    <div class="building">
+                        <div class="mt-3"></div>
+                        <div class="mCInsite">
+                            <!--Building, House, Shop-->
+                            <div class="house col-d-16">
+                                <div class="nFamily" title="Family K">K</div>
+                                <div class="mFamily">
+                                    <p><span id="members">4</span> người</p>
+                                </div>
+                            </div>
+                            <div class="shopping col-d-8 bg-heliotrope">
+                                <div class="nShop" title="Shopping K">K</div>
+                                <div class="rShop">9</div>
+                            </div>
+                            <div class="apartment col-d-4"><!--Max 50 người-->
+                                <div class="nAPM" title="Apartment K">K</div>
+                                <div class="rAPM" title="Ranking 10">10</div>
+                                <div class="iAPM">
+                                    <div class="placeA">
+                                        <p>10 người</p>
+                                        <p>10 người</p>
+                                    </div>
+                                    <div class="placeB">
+                                        <p>8 người</p>
+                                        <p>10 người</p>
+                                    </div>
+                                    <div class="placeC">
+                                        <p>15 người</p>
+                                        <p>10 người</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--./Building, House, Shop-->
+
+
+                        </div>
+                    </div>
+                
+                    <div class="other">
+                        <div class="mCInsite mt-3">
+                            <div class="factory"><!--Nhà máy-->
+                                <div class="col-4">
+                                    <div class="brand">
+                                        <div class="pFactory bg-success">
+                                            <div class="nf" title="Nhà máy Hạt Nhân - Thuộc KingG">Hạt Nhân</div>
+                                            <div class="qf">
+                                                <p>H.Suất: <span class="vlFac">100T</span> J/giờ</p>
+                                                <p>N.Lượng: <span class="vlFac">10T</span> J/10M</p>
+                                                <p>Q.Tải: <span class="vlFac">0%</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="brand">
+                                        <div class="pFactory bg-danger">
+                                            <div class="nf" title="Nhà máy Hạt Nhân - Thuộc KingG">Nhiệt Nhân</div>
+                                            <div class="qf">
+                                                <p>H.Suất: <span class="vlFac">100T</span> J/giờ</p>
+                                                <p>N.Lượng: <span class="vlFac">10T</span> J/10M</p>
+                                                <p>Q.Tải: <span class="vlFac">0%</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="brand">
+                                        <div class="pFactory bg-info">
+                                            <div class="nf" title="Nhà máy Hạt Nhân - Thuộc KingG">Thủy Nhân</div>
+                                            <div class="qf">
+                                                <p>H.Suất: <span class="vlFac">100T</span> J/giờ</p>
+                                                <p>N.Lượng: <span class="vlFac">10T</span> J/10M</p>
+                                                <p>Q.Tải: <span class="vlFac">0%</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="vacantLand"><!--Đất Trống-->
+                                <div class="col-4">
+                                    <div class="brand">
+                                        <div class="House bg-success" title="Nhà Kho Số 1 - Thuộc KingG"><!--Nhà Kho-->
+                                            <div class="nV">Nhà Kho #1</div>
+                                            <div class="qV" data-in="full">
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="brand">
+                                        <div class="House bg-danger" title="Nhà Kho Số 1 - Thuộc KingG"><!--Nhà Kho-->
+                                            <div class="nV">Nhà Kho #1</div>
+                                            <div class="qV" data-in="full">
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="brand">
+                                        <div class="House bg-info" title="Nhà Kho Số 1 - Thuộc KingG"><!--Nhà Kho-->
+                                            <div class="nV">Nhà Kho #1</div>
+                                            <div class="qV" data-in="full">
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="brand">
+                                        <div class="House bg-heliotrope" title="T.Tâm Thương Mại Số 1 - Thuộc KingG">
+                                            <div class="nV">Trung Tâm Thương Mại #1</div>
+                                            <div class="qV">
+                                                <p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>
+                                                <p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="brand">
+                                        <div class="House bg-warning" title="Ruộng Số 1 - Thuộc KingG">
+                                            <div class="nV">Ruộng #1</div>
+                                            <div class="qV">
+                                                <div class="col-4">
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./City -->
+    </section>
+    <!--Function-->
+        <div class="fBuilding">
+            <div class="brand">hello</div>
+        </div>
+        <div class="fVacantLand">
+            <div class="brand">Hello</div>
+        </div>
+    <!--./Function-->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+</body>
+</html>
