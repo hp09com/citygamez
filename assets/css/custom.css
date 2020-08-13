@@ -465,3 +465,21 @@ body{
     text-align: center;
     font-size: 20pt;
 }
+.footer{
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
+    display: block;
+    background-color: #eeee;
+    z-index: 1;
+}
+.footer .shopping{
+    display: inline-block;
+    float: right;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: auto 15px;
+}
+.shopping a[href]{
+    color: #000
+}

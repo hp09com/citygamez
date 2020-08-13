@@ -31,9 +31,8 @@ function building(num, key){
     return false
 }
 $(".building *").mouseenter( () => {
-    $(".fBuilding").show()
     $(".base").show()
 })
 $(".building").mouseleave( () => {
-        $(".base").hide()
+    $(".base").hide()
 })
