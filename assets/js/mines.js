@@ -56,14 +56,12 @@ function moveToX(x)
 function moveToY(y)
 {
     y = -100+ y - 10/100 * y
-    console.log(y)
     $('html, body').scrollTop(y);
     //moveToLeft(x)
 }
-$('.main').mousemove( (e) => {
+$('.main#outSide').mousemove( (e) => {
     var x = e.pageX - $('.main').offset().left;
     var y = e.pageY - $('.main').offset().top;
-    console.log(x)
     moveToX(x)
     moveToY(y)
 
@@ -71,7 +69,7 @@ $('.main').mousemove( (e) => {
 })
 $(document).ready( () => {
     $(".mc-farm[data-src='false']").on("click", function(e){
-        const id = $(this).data('sortid')
+        var id = $(this).data('sortid')
         console.log(id)
         $("#qGetResources").modal("show")
     });
