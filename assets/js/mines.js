@@ -47,10 +47,9 @@ $(document).ready( function() {
     
     $("html, body").scrollTop(scrollHeight)
 })
-
 function moveToX(x)
 {
-    x = x - 35/100 * x
+    x = -50+x - 35/100 * x
     $('html, body').scrollLeft(x);
     //moveToRight(x)
 }
@@ -64,8 +63,10 @@ function moveToY(y)
 $('.main').mousemove( (e) => {
     var x = e.pageX - $('.main').offset().left;
     var y = e.pageY - $('.main').offset().top;
+    console.log(x)
     moveToX(x)
     moveToY(y)
+
     //y = moveScreenY(y)
 })
 $(document).ready( () => {
