@@ -62,7 +62,7 @@
                     <div class="lane"></div>
                     <div class="building">
                         <div class="mt-3"></div>
-                        <div class="mCInsite">
+                        <div class="mCInsite" id="bhs">
                             <!--Building, House, Shop-->
                             <div class="house col-d-16">
                                 <div class="nFamily" title="Family K">K</div>
@@ -72,29 +72,43 @@
                             </div>
                             <div class="shopping col-d-8 bg-heliotrope">
                                 <div class="nShop" title="Shopping K">K</div>
-                                <div class="rShop">9</div>
+                                <div class="rShop">
+                                    <p data-max="9">1 2 3 4 5 6 7 8 9</p>
+                                    <p data-max="8">1 2 3 4 5 6 7 8</p>
+                                </div>
                             </div>
                             <div class="apartment col-d-4"><!--Max 50 người-->
                                 <div class="nAPM" title="Apartment K">K</div>
-                                <div class="rAPM" title="Ranking 10">10</div>
+                                <div class="rAPM" title="Ranking 100">100</div>
                                 <div class="iAPM">
                                     <div class="placeA">
-                                        <p>10 người</p>
-                                        <p>10 người</p>
+                                        <p>5 người</p>
                                     </div>
                                     <div class="placeB">
-                                        <p>8 người</p>
-                                        <p>10 người</p>
+                                        <p>5 người</p>
                                     </div>
                                     <div class="placeC">
-                                        <p>15 người</p>
-                                        <p>10 người</p>
+                                        <p>5 người</p>
                                     </div>
                                 </div>
                             </div>
                             <!--./Building, House, Shop-->
 
 
+                        </div>
+                        <div class="base">
+                            <div class="nBase">Căn Cứ</div>
+                            <div class="lvBase">2</div>
+                        </div>
+                        <div class="fBuilding">
+                            <div class="brand">
+                                <button class="btn btn-success" id="btnAdd_house" title="Tốn 1 tỷ">Add House</button>
+                                <button class="btn btn-danger bg-heliotrope" id="btnAdd_shop">Add Shop</button>
+                                <button class="btn btn-light" id="btnAdd_apartment">Add Apartment</button>
+                            </div>
+                        </div>
+                        <div class="fVacantLand">
+                            <div class="brand">Hello</div>
                         </div>
                     </div>
                 
@@ -242,14 +256,10 @@
         <!-- ./City -->
     </section>
     <!--Function-->
-        <div class="fBuilding">
-            <div class="brand">hello</div>
-        </div>
-        <div class="fVacantLand">
-            <div class="brand">Hello</div>
-        </div>
+        
     <!--./Function-->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/city.js"></script>
 </body>
 </html>
