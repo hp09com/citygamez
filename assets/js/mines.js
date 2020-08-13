@@ -49,13 +49,13 @@ $(document).ready( function() {
 })
 function moveToX(x)
 {
-    x = -50+x - 35/100 * x
+    x = x - (35/100) * x-50
     $('html, body').scrollLeft(x);
     //moveToRight(x)
 }
 function moveToY(y)
 {
-    y = -100+ y - 10/100 * y
+    y = -100+ y - (10/100) * y
     $('html, body').scrollTop(y);
     //moveToLeft(x)
 }
