@@ -10,3 +10,16 @@ $("#goOutSide").click(function(){
     $("#goOutSide").addClass('active')
     $("#app").load("outCity.html")
 })
+light()
+function light(){
+    $( "body" ).animate({backgroundColor: "#ded145"}, 150000 );
+    setTimeout(function(){
+        dark();
+    }, 0);
+}
+function dark(){
+    $( "body" ).animate({backgroundColor: "#373a3d"}, 150000 );
+    setTimeout(function(){
+        light();
+    }, 0);
+}
