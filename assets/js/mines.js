@@ -7,7 +7,9 @@ const widthPage = $('.main').height()
 var scrollHeight = heightPage-2200
 var scrollWidth = widthPage-2255
 var x = y = 0
-
+var isFullScreen = document.fullScreen || 
+                   document.mozFullScreen || 
+                   document.webkitIsFullScreen;
 for (let index = 1; index <= total; index++) {
     x = Math.floor(Math.random() * widthMine)
     y = Math.floor(Math.random() * heightMine)
@@ -54,7 +56,8 @@ function moveToX(x)
 }
 function moveToY(y)
 {
-    y = y - 10/100 * y
+    y = -100+ y - 10/100 * y
+    console.log(y)
     $('html, body').scrollTop(y);
     //moveToLeft(x)
 }
@@ -65,7 +68,6 @@ $('.main').mousemove( (e) => {
     moveToY(y)
     //y = moveScreenY(y)
 })
-
 $(document).ready( () => {
     $(".mc-farm[data-src='false']").on("click", function(e){
         const id = $(this).data('sortid')
