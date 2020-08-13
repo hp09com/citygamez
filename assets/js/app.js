@@ -1,0 +1,12 @@
+$("#app").load("city.html")
+$(".list-item").click(function(){
+    $(".list-item.active").removeClass('active')
+});
+$("#goToCity").click(function(){
+    $("#goToCity").addClass('active')
+    $("#app").load("city.html")
+});
+$("#goOutSide").click(function(){
+    $("#goOutSide").addClass('active')
+    $("#app").load("outCity.html")
+})
