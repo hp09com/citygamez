@@ -38,5 +38,5 @@ $(".building").mouseleave( () => {
     $(".base").hide()
 })
 $("#shopping_mall").modal("show");//Delete here
-$(".modal-content").css('height', screen.height-200)
-$(".modal-dialog").css('max-width', screen.width-200)
+$(".modal-content").css('height', screen.height-(10/100)*screen.height)
+$(".modal-dialog").css('max-width', screen.width-(10/100)*screen.width)
