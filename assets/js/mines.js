@@ -1,9 +1,9 @@
-const mcFarm = $(".mc-farm")
-const total = mcFarm.length//Count class exist
-const widthMine = 3500
-const heightMine = 3827
-const heightPage = $('.main').height()
-const widthPage = $('.main').height()
+var mcFarm = $(".mc-farm")
+var total = mcFarm.length//Count class exist
+var widthMine = 3500
+var heightMine = 3827
+var heightPage = $('.main').height()
+var widthPage = $('.main').height()
 var scrollHeight = heightPage-2200
 var scrollWidth = widthPage-2255
 var x = y = 0
