@@ -356,7 +356,7 @@
     <!--./Function-->
     <div class="modal fade" id="shopping_mall" tabindex="-1" role="dialog" aria-labelledby="shopping_mall" aria-hidden="true">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
+          <div class="modal-content bg-dark">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Mua đồ hàng:</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -364,7 +364,64 @@
               </button>
             </div>
             <div class="modal-body">
-                ...
+                <div class="filter">
+                    <form id="frmShoppingFilter">
+                        <div class="col-4">
+                            <div class="brand">
+                                <select name="" id="" class="bg-dark">
+                                    <option value="" selected>Mới Nhất</option>
+                                    <option value="">Sắp xếp: giá thấp tới cao</option>
+                                    <option value="">Sắp xếp: giá cao tới thấp</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <div class="col-4">
+                            <div class="brand">
+                            <input type="text" placeholder="Nhập tên vật phẩm..." class="bg-dark">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="brand">
+                                <select name="" id="" class="bg-dark">
+                                    <option value="" selected>Tất Cả</option>
+                                    <option value="">Vũ Khí</option>
+                                    <option value="">Thực Phẩm</option>
+                                    <option value="">Năng Lượng</option>
+                                    <option value="">Bản Vẽ</option>
+                                    <option value="">Giấy Phép</option>
+                                    <option value="">Khuyến Mãi</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="contentShop">
+                    <div class="brand bg-primary">
+                        <div class="col-1">
+                            <div class="brand">
+                                <div class="product bg-danger">
+                                    <div class="productName">Bản Vẽ Nhà Máy Hạt Nhân</div>
+                                    <div class="productDetail">
+                                        <span>1 tỷ Z</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div class="brand">
+                                <div class="product bg-danger">
+                                    <div class="productName">Bản Vẽ Nhà Máy Hạt Nhân</div>
+                                    <div class="productDetail">
+                                        <span>1 tỷ Z</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
