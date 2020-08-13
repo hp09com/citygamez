@@ -2,10 +2,10 @@ const mcFarm = $(".mc-farm")
 const total = mcFarm.length//Count class exist
 const widthMine = 3500
 const heightMine = 3827
-const heightPage = $(document).height()
-const widthPage = $(document).height()
-var scrollWidth = widthPage-2550
-var scrollHeight = heightPage-2300
+const heightPage = $('.main').height()
+const widthPage = $('.main').height()
+var scrollHeight = heightPage-2200
+var scrollWidth = widthPage-2255
 var x = y = 0
 
 for (let index = 1; index <= total; index++) {
@@ -39,28 +39,30 @@ function locateY(y, heightMine)
     locateY(y, heightMine)
 }
 
-function moveScreenX(x, scrollWidth)
-{
-    if(x > 1420)
-    { return scrollWidth = scrollWidth + 100 }
-    if(x < 50)
-    {return scrollWidth = scrollWidth - 100 }
-}
-
+// Hiện city của mình
 $(document).ready( function() {
-    console.log("hey")
-    $('html, body').animate({scrollLeft: scrollWidth }, 0)
+    $('html, body').scrollLeft(scrollWidth)
     
-    $("html, body").animate({ scrollTop: scrollHeight }, 0)
+    $("html, body").scrollTop(scrollHeight)
 })
 
-$("body").mousemove( (e) => {
-    var x = e.clientX
-    var y = e.clientY
-    console.log(x, y, scrollWidth)
-    x = moveScreenX(x, scrollWidth)
-    //$('html, body').animate({scrollLeft: x }, 0)
-    console.log(x)
+function moveToX(x)
+{
+    x = x - 35/100 * x
+    $('html, body').scrollLeft(x);
+    //moveToRight(x)
+}
+function moveToY(y)
+{
+    y = y - 10/100 * y
+    $('html, body').scrollTop(y);
+    //moveToLeft(x)
+}
+$('.main').mousemove( (e) => {
+    var x = e.pageX - $('.main').offset().left;
+    var y = e.pageY - $('.main').offset().top;
+    moveToX(x)
+    moveToY(y)
     //y = moveScreenY(y)
 })
 
