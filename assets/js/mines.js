@@ -1,7 +1,7 @@
 var mcFarm = $(".mc-farm")
 var total = mcFarm.length//Count class exist
-var widthMine = 3500
-var heightMine = 3827
+var widthMine = 6000
+var heightMine = 6000
 var heightPage = $('.main').height()
 var widthPage = $('.main').height()
 // city, 171.31
@@ -50,7 +50,8 @@ $(document).ready( function() {
 })
 function moveToX(x)
 {
-    x = (-120+x + 32*x/100)/2
+    x = -50+x + (-x + x/1.32);
+    console.log(x)
     $('html, body').scrollLeft(x);
     //moveToRight(x)
 }
@@ -63,6 +64,7 @@ function moveToY(y)
 $('.main#outSide').mousemove( (e) => {
     var x = e.pageX - $('.main').offset().left;
     var y = e.pageY - $('.main').offset().top;
+    console.log(x);
     moveToX(x)
     moveToY(y)
 
