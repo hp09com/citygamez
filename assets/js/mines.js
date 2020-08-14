@@ -4,8 +4,9 @@ var widthMine = 3500
 var heightMine = 3827
 var heightPage = $('.main').height()
 var widthPage = $('.main').height()
-var scrollHeight = heightPage-2200
-var scrollWidth = widthPage-2255
+// city, 171.31
+var scrollHeight = heightPage-(50/100)*heightPage - 20*screen.height/100
+var scrollWidth = widthPage-(50/100)*widthPage - 42.3*screen.width/100
 var x = y = 0
 var isFullScreen = document.fullScreen || 
                    document.mozFullScreen || 
@@ -49,7 +50,7 @@ $(document).ready( function() {
 })
 function moveToX(x)
 {
-    x = x - (35/100) * x-50
+    x = (-120+x + 32*x/100)/2
     $('html, body').scrollLeft(x);
     //moveToRight(x)
 }
