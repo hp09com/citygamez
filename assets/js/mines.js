@@ -1,12 +1,10 @@
 var mcFarm = $(".mc-farm")
 var total = mcFarm.length//Count class exist
-var widthMine = 6000
-var heightMine = 6000
+var widthMine = 1428
+var heightMine = 9300
 var heightPage = $('.main').height()
 var widthPage = $('.main').height()
 // city, 171.31
-var scrollHeight = heightPage-(50/100)*heightPage - 20*screen.height/100
-var scrollWidth = widthPage-(50/100)*widthPage - 42.3*screen.width/100
 var x = y = 0
 var isFullScreen = document.fullScreen || 
                    document.mozFullScreen || 
@@ -47,28 +45,6 @@ $(document).ready( function() {
     $('html, body').scrollLeft(scrollWidth)
     
     $("html, body").scrollTop(scrollHeight)
-})
-function moveToX(x)
-{
-    x = -50+x + (-x + x/1.32);
-    console.log(x)
-    $('html, body').scrollLeft(x);
-    //moveToRight(x)
-}
-function moveToY(y)
-{
-    y = -100+ y - (10/100) * y
-    $('html, body').scrollTop(y);
-    //moveToLeft(x)
-}
-$('.main#outSide').mousemove( (e) => {
-    var x = e.pageX - $('.main').offset().left;
-    var y = e.pageY - $('.main').offset().top;
-    console.log(x);
-    moveToX(x)
-    moveToY(y)
-
-    //y = moveScreenY(y)
 })
 $(document).ready( () => {
     $(".mc-farm[data-src='false']").on("click", function(e){
