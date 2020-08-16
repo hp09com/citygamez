@@ -584,6 +584,3 @@ table.order-bill tbody tr td:last-child{
     font-weight: bold;
     text-transform: uppercase;
 }
-#app{
-    float: left;
-}
