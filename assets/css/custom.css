@@ -1,7 +1,7 @@
 *{padding:0;margin:0}
 html,body{height:100%;}
 body{
-    background-color: #ded145;
+    background-color: #EEEEEE;
     font-family: 'Times New Roman', Times, serif;
 }
 .frm{
@@ -48,28 +48,28 @@ body{
 .main{
     position: relative;
     display: block;
-    width: 1830px;/*1973px*/
-    height: 1900px;
+    width: 100%;/*1973px*/
+    height: 100%;/* 1900px */
     margin-top: 60px;
     margin-bottom: 10px;
     float: left;
+    overflow-x: scroll
 }
 .main#outSide{
     margin-left: auto;
     margin-right: auto;
-<<<<<<< HEAD
-    width: 3726px;
-    height: 9800px;
-    padding: 50px;
-    cursor: grab;
-=======
     width: 9800px;
     height: 9800px;
     padding: 50px;
     cursor: grab
->>>>>>> efe5b039be825825cbbb4741cc4dea792abb269a
 }
 .city,.outCity{
+    width: 1730px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+.outCity{
     width: 100%;
     height: 100%;
     position: relative;
@@ -583,4 +583,9 @@ table.order-bill tbody tr td:last-child{
     font-size: 13pt;
     font-weight: bold;
     text-transform: uppercase;
+}
+.text-light .nav-item .nav-link{
+    color: #fff;
+}.text-light .nav-item .nav-link.active{
+    color: #495057;
 }
