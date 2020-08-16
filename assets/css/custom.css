@@ -1,5 +1,5 @@
 *{padding:0;margin:0}
-html,body{height:100%;overflow: auto}
+html,body{height:100%;}
 body{
     background-color: #ded145;
     font-family: 'Times New Roman', Times, serif;
@@ -57,10 +57,17 @@ body{
 .main#outSide{
     margin-left: auto;
     margin-right: auto;
+<<<<<<< HEAD
     width: 3726px;
     height: 9800px;
     padding: 50px;
     cursor: grab;
+=======
+    width: 9800px;
+    height: 9800px;
+    padding: 50px;
+    cursor: grab
+>>>>>>> efe5b039be825825cbbb4741cc4dea792abb269a
 }
 .city,.outCity{
     width: 100%;
@@ -576,4 +583,7 @@ table.order-bill tbody tr td:last-child{
     font-size: 13pt;
     font-weight: bold;
     text-transform: uppercase;
+}
+#app{
+    float: left;
 }
