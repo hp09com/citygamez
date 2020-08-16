@@ -40,12 +40,6 @@ function locateY(y, heightMine)
     locateY(y, heightMine)
 }
 
-// Hiện city của mình
-$(document).ready( function() {
-    $('html, body').scrollLeft(scrollWidth)
-    
-    $("html, body").scrollTop(scrollHeight)
-})
 $(document).ready( () => {
     $(".mc-farm[data-src='false']").on("click", function(e){
         var id = $(this).data('sortid')
@@ -53,3 +47,26 @@ $(document).ready( () => {
         $("#qGetResources").modal("show")
     });
 })
+var clicked = false, clickY, clickX;
+$("body").on({
+    'mousemove': function(e) {
+        clicked && updateScrollPos(e);
+    },
+    'mousedown': function(e) {
+        clicked = true;
+        clickY = e.pageY;
+        clickX = e.pageX;
+    },
+    'mouseup': function() {
+        clicked = false;
+
+        $('.main#outSide').css('cursor', 'grab');
+    }
+});
+
+var updateScrollPos = function(e) {
+    $('.main#outSide').css('cursor', 'grabbing');
+    const walkTop = $(window).scrollTop() + (clickY - e.pageY);
+    $(window).scrollTop(walkTop);
+    $(window).scrollLeft($(window).scrollLeft() + (clickX - e.pageX));
+}
